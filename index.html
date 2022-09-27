@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Learn javascript ES6 loops</title>
+    </head>
+    <body>
+        <script>
+            //-for-of-loop
+            //-looping through an iterable object
+            const cars = ['Tesla', 'BMW', 'Nissan'];
+
+            for(const car of cars) {
+                console.log(car);
+            }
+            //--break usage
+            for (const car of cars) {
+                //console.log("Some car is " + car)
+                if (car === 'BMW') {
+                    continue;
+                }
+                console.log("Some car is " + car)
+            }
+
+            const auto = {
+                name: 'tesla',
+                year: 2021,
+                color: 'red'
+            }
+            for (const feature of Object.keys(auto)){
+                console.log(feature);
+            }
+            for (const feature of Object.values(auto)) {
+                console.log(feature);
+            }
+
+            //-for-of -looping through a string
+            let language ="JavaScript";
+            let buffer =""
+            for(const symbol of language) {
+                buffer += "_"
+                buffer +=symbol;
+                buffer += "_"
+            }
+            console.log(buffer);
+
+            //-forEach ---without break or continue - commands
+            cars.forEach(car =>{
+                console.log(car)
+                console.log(" ")
+            }
+
+            )
+
+            //-for in- looping through the properties of an objecct
+            const person = {
+                firstname: 'Danila',
+                lastname: 'Bodrov',
+                age: 25
+            }
+            let text = "";
+            for (const key in person) {
+                text += key;
+                text += ": ";
+                text += person[key];
+                text += " "
+            }
+            console.log(text);
+        </script>
+
+    </body>
+</html>

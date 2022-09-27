@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title>JavaScript hoisting learn</title>
+    </head>
+    <body>
+        <script>
+            //-1--Hositing of variables
+            
+            console.log(greating);
+            /* ReferenceError will be reported because hoisting doesn't work with let or const
+            let greating = 'Hello'; */
+            var greating = 'Hello, you should work!!!'; //undefined
+
+            //-2--Hositing of functions
+            console.log(addTwoNumbers(5, 2));// 7
+
+            function addTwoNumbers(a, b) {
+                return a + b; 
+            }
+
+            //--Hoisting doesn't work with functional expressions like
+            //console.log(add(2, 4));//--Here is the ReferenceError
+            //const add = (c, d) => {c + d};
+            //--similar error with anonymous function 
+            //console.log(addNumbers(2, 3));
+            //const addNumbers = function (c, d) {
+            //    return c + d; 
+            //}
+
+        </script>
+    </body>
+
+</html>
